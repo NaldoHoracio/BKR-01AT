@@ -478,11 +478,6 @@ F 3 "~" H 6375 3265 50  0001 C CNN
 	1    6375 3265
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 3925 5010
-NoConn ~ 4025 5010
-NoConn ~ 4125 5010
-NoConn ~ 4225 5010
-NoConn ~ 4325 5010
 NoConn ~ 4525 5010
 NoConn ~ 5175 4360
 NoConn ~ 5175 4160
@@ -520,53 +515,6 @@ Wire Notes Line
 	765  1210 6970 1210
 Text Notes 3020 1400 0    100  ~ 20
 MCU - NRF52832-QFAB-R
-$Comp
-L Device:Battery_Cell BT1
-U 1 1 5E731E6B
-P 10105 5505
-F 0 "BT1" H 10223 5601 50  0000 L CNN
-F 1 "Battery_Cell" H 10223 5510 50  0000 L CNN
-F 2 "Battery:Battery_CR1225" V 10105 5565 50  0001 C CNN
-F 3 "~" V 10105 5565 50  0001 C CNN
-	1    10105 5505
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	9275 4825 10975 4825
-Wire Notes Line
-	10975 4825 10975 5935
-Wire Notes Line
-	10975 5935 9275 5935
-Wire Notes Line
-	9275 5935 9275 4825
-Text Notes 9780 5010 0    100  ~ 20
-BATTERY
-$Comp
-L power:VDD #PWR0113
-U 1 1 5E7464E3
-P 10105 5240
-F 0 "#PWR0113" H 10105 5090 50  0001 C CNN
-F 1 "VDD" H 10122 5413 50  0000 C CNN
-F 2 "" H 10105 5240 50  0001 C CNN
-F 3 "" H 10105 5240 50  0001 C CNN
-	1    10105 5240
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10105 5240 10105 5305
-$Comp
-L power:GND #PWR0114
-U 1 1 5E74AF7A
-P 10105 5675
-F 0 "#PWR0114" H 10105 5425 50  0001 C CNN
-F 1 "GND" H 10110 5502 50  0000 C CNN
-F 2 "" H 10105 5675 50  0001 C CNN
-F 3 "" H 10105 5675 50  0001 C CNN
-	1    10105 5675
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10105 5605 10105 5675
 $Comp
 L Device:C C14
 U 1 1 5E75BE65
@@ -933,50 +881,6 @@ F 3 "~" H 10360 3695 50  0001 C CNN
 	1    10360 3695
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Mechanical:Fiducial FID1
-U 1 1 5E856FBE
-P 7475 5340
-F 0 "FID1" H 7560 5386 50  0000 L CNN
-F 1 "Fiducial" H 7560 5295 50  0000 L CNN
-F 2 "Fiducial:Fiducial_0.5mm_Mask1.5mm" H 7475 5340 50  0001 C CNN
-F 3 "~" H 7475 5340 50  0001 C CNN
-	1    7475 5340
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:Fiducial FID2
-U 1 1 5E8589CC
-P 8305 5325
-F 0 "FID2" H 8390 5371 50  0000 L CNN
-F 1 "Fiducial" H 8390 5280 50  0000 L CNN
-F 2 "Fiducial:Fiducial_0.5mm_Mask1.5mm" H 8305 5325 50  0001 C CNN
-F 3 "~" H 8305 5325 50  0001 C CNN
-	1    8305 5325
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H1
-U 1 1 5E85CE87
-P 7475 5645
-F 0 "H1" H 7575 5691 50  0000 L CNN
-F 1 "MountingHole" H 7575 5600 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 7475 5645 50  0001 C CNN
-F 3 "~" H 7475 5645 50  0001 C CNN
-	1    7475 5645
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 5E85D448
-P 8315 5640
-F 0 "H2" H 8415 5686 50  0000 L CNN
-F 1 "MountingHole" H 8415 5595 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 8315 5640 50  0001 C CNN
-F 3 "~" H 8315 5640 50  0001 C CNN
-	1    8315 5640
-	1    0    0    -1  
-$EndComp
 Text GLabel 3175 3760 0    50   Input ~ 0
 ButtonRST
 Text GLabel 3175 3860 0    50   Input ~ 0
@@ -1123,21 +1027,262 @@ Wire Notes Line
 	7220 4255 7220 1220
 Wire Wire Line
 	7980 3200 7980 3305
-Wire Notes Line
-	9040 4820 9040 5940
-Wire Notes Line
-	9040 5940 7225 5940
-Wire Notes Line
-	9040 4820 7225 4820
-Wire Notes Line
-	7225 4820 7225 5940
 $Comp
-L Connector:Conn_01x02_Female J2
-U 1 1 5E5C2C6B
+L sensor_motion:LIS2DH U2
+U 1 1 5E646B0C
+P 9055 5825
+F 0 "U2" H 9105 6206 50  0000 C CNN
+F 1 "LIS2DH" H 9105 6115 50  0000 C CNN
+F 2 "Package_LGA:LGA-14_2x2mm_P0.35mm_LayoutBorder3x4y" H 9105 4925 50  0001 C CNN
+F 3 "http://www.st.com/web/en/resource/technical/document/datasheet/DM00042751.pdf" H 9505 5475 50  0001 C CNN
+	1    9055 5825
+	-1   0    0    1   
+$EndComp
+Text GLabel 8555 5675 0    50   Input ~ 0
+SPI-SPC
+Text GLabel 8555 5575 0    50   Input ~ 0
+SPI-SDI
+Text GLabel 8555 5475 0    50   Input ~ 0
+SPI-SDO
+Text GLabel 8555 5375 0    50   Input ~ 0
+SPI-CS
+$Comp
+L power:VDD #PWR0130
+U 1 1 5E66E9C8
+P 9870 4905
+F 0 "#PWR0130" H 9870 4755 50  0001 C CNN
+F 1 "VDD" H 9887 5078 50  0000 C CNN
+F 2 "" H 9870 4905 50  0001 C CNN
+F 3 "" H 9870 4905 50  0001 C CNN
+	1    9870 4905
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 5E67A33B
+P 8720 6050
+F 0 "#PWR0131" H 8720 5800 50  0001 C CNN
+F 1 "GND" H 8725 5877 50  0000 C CNN
+F 2 "" H 8720 6050 50  0001 C CNN
+F 3 "" H 8720 6050 50  0001 C CNN
+	1    8720 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0134
+U 1 1 5E6983E3
+P 9540 5750
+F 0 "#PWR0134" H 9540 5500 50  0001 C CNN
+F 1 "GND" H 9545 5577 50  0000 C CNN
+F 2 "" H 9540 5750 50  0001 C CNN
+F 3 "" H 9540 5750 50  0001 C CNN
+	1    9540 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9455 5675 9540 5675
+Wire Wire Line
+	9540 5675 9540 5750
+NoConn ~ 8905 5025
+NoConn ~ 9005 5025
+$Comp
+L Device:C C13
+U 1 1 5E6FDA43
+P 10020 5040
+F 0 "C13" V 10155 4986 50  0000 L CNN
+F 1 "10uF" V 9885 4915 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10058 4890 50  0001 C CNN
+F 3 "~" H 10020 5040 50  0001 C CNN
+	1    10020 5040
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 5E702006
+P 10020 5375
+F 0 "C15" V 10155 5321 50  0000 L CNN
+F 1 "100nF" V 9885 5250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10058 5225 50  0001 C CNN
+F 3 "~" H 10020 5375 50  0001 C CNN
+	1    10020 5375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9455 5375 9870 5375
+Wire Wire Line
+	9870 5375 9870 5040
+Connection ~ 9870 5375
+Connection ~ 9870 5040
+Wire Wire Line
+	9870 5040 9870 4905
+Wire Wire Line
+	10170 5040 10170 5375
+Wire Wire Line
+	10170 5375 10255 5375
+Connection ~ 10170 5375
+$Comp
+L power:GND #PWR0137
+U 1 1 5E738E8E
+P 10255 5375
+F 0 "#PWR0137" H 10255 5125 50  0001 C CNN
+F 1 "GND" H 10260 5202 50  0000 C CNN
+F 2 "" H 10255 5375 50  0001 C CNN
+F 3 "" H 10255 5375 50  0001 C CNN
+	1    10255 5375
+	1    0    0    -1  
+$EndComp
+Text GLabel 9105 5025 1    50   Input ~ 0
+Vdd_IO
+Wire Wire Line
+	9540 5675 9540 5575
+Wire Wire Line
+	9540 5575 9455 5575
+Connection ~ 9540 5675
+Wire Wire Line
+	9540 5575 9540 5475
+Wire Wire Line
+	9540 5475 9455 5475
+Connection ~ 9540 5575
+Wire Wire Line
+	8905 6025 8905 6050
+Wire Wire Line
+	8905 6050 8720 6050
+Wire Wire Line
+	9005 6025 9005 6050
+Wire Wire Line
+	9005 6050 8905 6050
+Connection ~ 8905 6050
+Wire Wire Line
+	9105 6025 9105 6050
+Wire Wire Line
+	9105 6050 9005 6050
+Connection ~ 9005 6050
+Text GLabel 4225 5010 3    50   Input ~ 0
+SPI-SPC
+Text GLabel 4125 5010 3    50   Input ~ 0
+SPI-SDI
+Text GLabel 4025 5010 3    50   Input ~ 0
+SPI-SDO
+Text GLabel 3925 5010 3    50   Input ~ 0
+SPI-CS
+Text GLabel 4325 5010 3    50   Input ~ 0
+Vdd_IO
+Wire Notes Line
+	10980 4420 10980 6370
+Wire Notes Line
+	10980 6370 7225 6370
+Wire Notes Line
+	7225 6370 7225 4420
+Wire Notes Line
+	7225 4420 10980 4420
+Text Notes 8560 4605 0    100  ~ 20
+Acelerômetro
+Wire Notes Line
+	755  6220 755  7340
+Wire Notes Line
+	2570 6220 755  6220
+Wire Notes Line
+	2570 7340 755  7340
+Wire Notes Line
+	2570 6220 2570 7340
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5E85D448
+P 1845 7040
+F 0 "H2" H 1945 7086 50  0000 L CNN
+F 1 "MountingHole" H 1945 6995 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 1845 7040 50  0001 C CNN
+F 3 "~" H 1845 7040 50  0001 C CNN
+	1    1845 7040
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5E85CE87
+P 1005 7045
+F 0 "H1" H 1105 7091 50  0000 L CNN
+F 1 "MountingHole" H 1105 7000 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 1005 7045 50  0001 C CNN
+F 3 "~" H 1005 7045 50  0001 C CNN
+	1    1005 7045
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 5E8589CC
+P 1835 6725
+F 0 "FID2" H 1920 6771 50  0000 L CNN
+F 1 "Fiducial" H 1920 6680 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1.5mm" H 1835 6725 50  0001 C CNN
+F 3 "~" H 1835 6725 50  0001 C CNN
+	1    1835 6725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 5E856FBE
+P 1005 6740
+F 0 "FID1" H 1090 6786 50  0000 L CNN
+F 1 "Fiducial" H 1090 6695 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1.5mm" H 1005 6740 50  0001 C CNN
+F 3 "~" H 1005 6740 50  0001 C CNN
+	1    1005 6740
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3635 7005 3635 7075
+$Comp
+L power:GND #PWR0114
+U 1 1 5E74AF7A
+P 3635 7075
+F 0 "#PWR0114" H 3635 6825 50  0001 C CNN
+F 1 "GND" H 3640 6902 50  0000 C CNN
+F 2 "" H 3635 7075 50  0001 C CNN
+F 3 "" H 3635 7075 50  0001 C CNN
+	1    3635 7075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3635 6640 3635 6705
+$Comp
+L power:VDD #PWR0113
+U 1 1 5E7464E3
+P 3635 6640
+F 0 "#PWR0113" H 3635 6490 50  0001 C CNN
+F 1 "VDD" H 3652 6813 50  0000 C CNN
+F 2 "" H 3635 6640 50  0001 C CNN
+F 3 "" H 3635 6640 50  0001 C CNN
+	1    3635 6640
+	1    0    0    -1  
+$EndComp
+Text Notes 3310 6410 0    100  ~ 20
+BATTERY
+Wire Notes Line
+	2805 7335 2805 6225
+Wire Notes Line
+	4505 7335 2805 7335
+Wire Notes Line
+	4505 6225 4505 7335
+Wire Notes Line
+	2805 6225 4505 6225
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5E731E6B
+P 3635 6905
+F 0 "BT1" H 3753 7001 50  0000 L CNN
+F 1 "Battery_Cell" H 3753 6910 50  0000 L CNN
+F 2 "Battery:Battery_Panasonic_CR2032-VS1N_Vertical_CircularHoles" V 3635 6965 50  0001 C CNN
+F 3 "~" V 3635 6965 50  0001 C CNN
+	1    3635 6905
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5E89AD0B
 P 3825 5210
-F 0 "J2" V 3771 5258 50  0000 L CNN
-F 1 "Conn_01x02_Female" V 3862 5258 50  0000 L CNN
-F 2 "Connector:Banana_Jack_2Pin" H 3825 5210 50  0001 C CNN
+F 0 "J2" H 3997 5210 50  0000 L CNN
+F 1 "Conn_01x02" H 3888 5090 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 3825 5210 50  0001 C CNN
 F 3 "~" H 3825 5210 50  0001 C CNN
 	1    3825 5210
 	0    1    1    0   

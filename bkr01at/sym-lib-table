@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name nrf52832-qfab)(type Legacy)(uri ${KIPRJMOD}/nrf52832-qfab.lib)(options "")(descr ""))
+  (lib (name sensor_motion)(type Legacy)(uri /home/horacio/Documentos/UFAL/2019.2/CIRCUITOS_IMPRESSOS/BKR-01AT/bkr01at/Sensor_Motion_DHTR.lib)(options "")(descr ""))
 )
