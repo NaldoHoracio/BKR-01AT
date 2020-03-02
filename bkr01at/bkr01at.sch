@@ -148,10 +148,10 @@ Wire Wire Line
 Wire Wire Line
 	2120 3560 2120 2990
 $Comp
-L Device:Crystal Y2
+L Device:Crystal Y1
 U 1 1 5E5CD967
 P 5870 2590
-F 0 "Y2" V 5824 2721 50  0000 L CNN
+F 0 "Y1" V 5824 2721 50  0000 L CNN
 F 1 "32MHz" V 5915 2721 50  0000 L CNN
 F 2 "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm" H 5870 2590 50  0001 C CNN
 F 3 "~" H 5870 2590 50  0001 C CNN
@@ -159,10 +159,10 @@ F 3 "~" H 5870 2590 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Crystal Y1
+L Device:Crystal Y2
 U 1 1 5E5CFD92
 P 1545 3260
-F 0 "Y1" V 1499 3391 50  0000 L CNN
+F 0 "Y2" V 1499 3391 50  0000 L CNN
 F 1 "32.768kHz" V 1590 3391 50  0000 L CNN
 F 2 "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm" H 1545 3260 50  0001 C CNN
 F 3 "~" H 1545 3260 50  0001 C CNN
@@ -200,7 +200,7 @@ L Device:C C10
 U 1 1 5E58F78A
 P 4050 1965
 F 0 "C10" H 3785 2011 50  0000 L CNN
-F 1 "1pF" H 3795 1920 50  0000 L CNN
+F 1 "1uF" H 3795 1920 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4088 1815 50  0001 C CNN
 F 3 "~" H 4050 1965 50  0001 C CNN
 	1    4050 1965
@@ -1277,14 +1277,43 @@ F 3 "~" V 3635 6965 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 5E89AD0B
-P 3825 5210
-F 0 "J2" H 3997 5210 50  0000 L CNN
-F 1 "Conn_01x02" H 3888 5090 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 3825 5210 50  0001 C CNN
-F 3 "~" H 3825 5210 50  0001 C CNN
-	1    3825 5210
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5E8D3D8E
+P 5265 7020
+F 0 "J2" V 5137 7100 50  0000 L CNN
+F 1 "Conn_01x01" V 5228 7100 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 5265 7020 50  0001 C CNN
+F 3 "~" H 5265 7020 50  0001 C CNN
+	1    5265 7020
 	0    1    1    0   
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5E8D5F8A
+P 5910 7030
+F 0 "J3" V 5782 7110 50  0000 L CNN
+F 1 "Conn_01x01" V 5873 7110 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 5910 7030 50  0001 C CNN
+F 3 "~" H 5910 7030 50  0001 C CNN
+	1    5910 7030
+	0    1    1    0   
+$EndComp
+Text Notes 4910 6570 0    100  ~ 20
+Conectores para\nsensor de Temperatura
+Wire Notes Line
+	4825 6225 6725 6225
+Wire Notes Line
+	6725 6225 6725 7335
+Wire Notes Line
+	6725 7335 4825 7335
+Wire Notes Line
+	4825 7335 4825 6225
+Text GLabel 3725 5010 3    50   Input ~ 0
+J2
+Text GLabel 3825 5010 3    50   Input ~ 0
+J3
+Text GLabel 5265 6820 1    50   Input ~ 0
+J2
+Text GLabel 5910 6830 1    50   Input ~ 0
+J3
 $EndSCHEMATC
