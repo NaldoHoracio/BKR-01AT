@@ -1,0 +1,174 @@
+.HEA
+.TIM Seg 02 Mar 2020 11:20:44 -03
+.APP "Eeschema 5.1.4-e60b266~84~ubuntu16.04.1"
+
+.ADD_COM U1 nRF52832-QFAB  Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.6x4.6mm
+.ADD_COM C3 0.8pF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C4 100nF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C5 100nF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM Y1 32MHz  Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm
+.ADD_COM Y2 32.768kHz  Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm
+.ADD_COM L2 10uH  Inductor_SMD:L_0402_1005Metric
+.ADD_COM L3 15nH  Inductor_SMD:L_0402_1005Metric
+.ADD_COM C10 1uF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C11 12pF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C12 12pF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C8 100nF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM L1 3.9nH  Inductor_SMD:L_0402_1005Metric
+.ADD_COM C2 12pF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C1 12pF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C6 N.C.  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C7 100pF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C9 4.7uF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C14 2.2pF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM L5 3.9nH  Inductor_SMD:L_0402_1005Metric
+.ADD_COM L4 15nH  Inductor_SMD:L_0402_1005Metric
+.ADD_COM AE1 Antenna  antena_ble:2450AT18B100
+.ADD_COM SW3 SW_Push  Button_Switch_SMD:SW_MEC_5GSH9
+.ADD_COM SW2 SW_Push  Button_Switch_SMD:SW_MEC_5GSH9
+.ADD_COM SW1 SW_Push  Button_Switch_SMD:SW_MEC_5GSH9
+.ADD_COM R1 10k  Resistor_SMD:R_0402_1005Metric
+.ADD_COM R2 10k  Resistor_SMD:R_0402_1005Metric
+.ADD_COM R3 10k  Resistor_SMD:R_0402_1005Metric
+.ADD_COM R4 50  Resistor_SMD:R_0402_1005Metric
+.ADD_COM D1 LED  LED_SMD:LED_0603_1608Metric
+.ADD_COM R5 50  Resistor_SMD:R_0402_1005Metric
+.ADD_COM D2 LED  LED_SMD:LED_0603_1608Metric
+.ADD_COM R6 50  Resistor_SMD:R_0402_1005Metric
+.ADD_COM D3 LED  LED_SMD:LED_0603_1608Metric
+.ADD_COM J1 Conn_02x03_Odd_Even  Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical
+.ADD_COM U2 LIS2DH  Package_LGA:LGA-14_2x2mm_P0.35mm_LayoutBorder3x4y
+.ADD_COM C13 10uF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM C15 100nF  Capacitor_SMD:C_0402_1005Metric
+.ADD_COM H2 MountingHole  MountingHole:MountingHole_3.2mm_M3
+.ADD_COM H1 MountingHole  MountingHole:MountingHole_3.2mm_M3
+.ADD_COM FID2 Fiducial  Fiducial:Fiducial_0.5mm_Mask1.5mm
+.ADD_COM FID1 Fiducial  Fiducial:Fiducial_0.5mm_Mask1.5mm
+.ADD_COM BT1 Battery_Cell  Battery:Battery_Panasonic_CR2032-VS1N_Vertical_CircularHoles
+.ADD_COM J2 Conn_01x01  Connector_Wire:SolderWirePad_1x01_Drill0.8mm
+.ADD_COM J3 Conn_01x01  Connector_Wire:SolderWirePad_1x01_Drill0.8mm
+
+
+.ADD_TER SW1.1  ButtonRST
+.TER     U1.4
+         R1.2
+.ADD_TER R4.2  LedON
+.TER     U1.5
+         D1.2
+.ADD_TER C10.1  GND
+.TER     C15.2
+         C5.2
+         C6.2
+         U1.31
+         U1.45
+         C4.2
+         C3.2
+         J1.5
+         C7.2
+         U2.10
+         U2.11
+         U2.12
+         U2.13
+         U2.14
+         U2.9
+         C13.2
+         BT1.2
+         L4.1
+         C9.1
+         D2.1
+         SW2.2
+         SW3.2
+         D3.1
+         C1.2
+         C2.2
+         D1.1
+         SW1.2
+         C11.2
+         C12.2
+         C8.1
+.ADD_TER U2.8  VDD
+.TER     C5.1
+         U1.36
+         U1.48
+         C8.2
+         U1.13
+         C9.2
+         R6.1
+         R4.1
+         BT1.1
+         C13.1
+         C15.1
+         R5.1
+         J1.1
+         R2.1
+         R1.1
+         R3.1
+.ADD_TER J1.3  RST
+.TER     U1.24
+.ADD_TER J1.2  SWDIO
+.TER     U1.26
+.ADD_TER L5.2  Net-(AE1-Pad1)
+.TER     AE1.1
+.ADD_TER L4.2  Net-(C14-Pad2)
+.TER     C14.2
+         L5.1
+.ADD_TER U1.15  J3
+.TER     J3.1
+.ADD_TER J2.1  J2
+.TER     U1.14
+.ADD_TER U1.20  Vdd_IO
+.TER     U2.7
+.ADD_TER U1.32  Net-(C6-Pad1)
+.TER     C6.1
+.ADD_TER C4.1  Net-(C4-Pad1)
+.TER     U1.1
+.ADD_TER L3.1  Net-(L2-Pad2)
+.TER     L2.2
+.ADD_TER U1.46  Net-(C10-Pad2)
+.TER     C10.2
+         L3.2
+.ADD_TER U1.47  Net-(L2-Pad1)
+.TER     L2.1
+.ADD_TER U1.34  Net-(C1-Pad1)
+.TER     C1.1
+         Y1.2
+.ADD_TER C7.1  Net-(C7-Pad1)
+.TER     U1.33
+.ADD_TER J1.4  SWDCLK
+.TER     U1.25
+.ADD_TER U2.1  SPI-SPC
+.TER     U1.19
+.ADD_TER U1.18  SPI-SDI
+.TER     U2.2
+.ADD_TER U1.17  SPI-SDO
+.TER     U2.3
+.ADD_TER U2.4  SPI-CS
+.TER     U1.16
+.ADD_TER D3.2  LedV
+.TER     U1.7
+         R6.2
+.ADD_TER R5.2  LedT
+.TER     U1.6
+         D2.2
+.ADD_TER U1.38  ButtonF2
+.TER     SW3.1
+         R3.2
+.ADD_TER SW2.1  ButtonF1
+.TER     R2.2
+         U1.37
+.ADD_TER Y1.1  Net-(C2-Pad1)
+.TER     C2.1
+         U1.35
+.ADD_TER C14.1  ANT
+.TER     L1.2
+.ADD_TER C3.1  Net-(C3-Pad1)
+.TER     L1.1
+         U1.30
+.ADD_TER C11.1  Net-(C11-Pad1)
+.TER     Y2.1
+         U1.2
+.ADD_TER Y2.2  Net-(C12-Pad1)
+.TER     U1.3
+         C12.1
+
+.END
